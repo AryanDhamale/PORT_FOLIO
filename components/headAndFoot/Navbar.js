@@ -15,7 +15,7 @@ function Navbar()
                 <ul className="flex items-center gap-x-6 transition-all ease-in delay-500">
                     
                     {
-                        sections.map((ele,idx)=><li key={ele}><Link to={ele[0].toLowerCase()+ele.slice(1)}  offset={-76} spy={true} smooth={true} duration={600} activeClass="rounded-full text-white bg-[#202020] hover:text-white" className="text-base font-normal cursor-pointer hover:text-[#4ea88a] px-4 py-2">{ele}</Link></li>)
+                        sections.map((ele,idx)=><li key={ele}><Link to={ele[0].toLowerCase()+ele.slice(1)}  spy={true} smooth={true} duration={600} activeClass="rounded-full text-white bg-[#202020] dark:bg-white dark:text-black hover:text-white" className="text-base font-normal cursor-pointer hover:text-[#4ea88a] px-4 py-2">{ele}</Link></li>)
                     }
                     
                 </ul>

@@ -5,6 +5,7 @@ import ConHeading from "../common-con/con-heading";
 import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 function About() {
 
@@ -14,11 +15,11 @@ function About() {
 
         setbtnText(() => ({ disable: true, text: 'await...' }));
         await new Promise((resolve) => setTimeout(resolve, 2000));
-        setbtnText(() => ({disable:true,text:'Resolved'}));
+        setbtnText(() => ({disable:false,text:'Resolved'}));
         router.push('https://drive.google.com/file/d/1BA2uB3htChmBFvwgYfEWgFK9rU7BBAe6/view?usp=sharing');
     }
     return (
-        <section id="about">
+        <motion.section id="about" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
             <div className="w-full">
                 <ConHeading text={'ABOUT ME'} />
                 <div className="mt-6 min-h-[80vh] w-full grid grid-cols-2 px-10">
@@ -40,8 +41,8 @@ function About() {
                             </div>
                             <div className="mt-2">
                                 {/* CTA  */}
-                                <button disabled={btnText.disable} onClick={downloadCv} className="cursor-pointer flex items-center justify-between px-2 rounded-full py-2 bg-[#003631] w-[200px]">
-                                    <span className="font-medium text-lg text-[#a8fc00] ps-5">{btnText.text}</span>
+                                <button disabled={btnText.disable} onClick={downloadCv} className="cursor-pointer flex items-center justify-between px-2 rounded-full py-2 bg-[#003631] w-[190px]">
+                                    <span className="font-medium text-lg text-[#a8fc00] ps-3">{btnText.text}</span>
                                     {!btnText.disable ? <div className="size-11 rounded-full bg-[#a8fc00] flex justify-center items-center"><GoArrowUpRight className="text-xl text-[#003732]" /></div> : 
                                     <div className="size-11 flex items-center justify-center">
                                         <div className="w-full h-full border-4 border-[#a8fc00] border-t-transparent rounded-full animate-spin"></div>
@@ -54,7 +55,7 @@ function About() {
 
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 

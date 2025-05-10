@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import ConHeading from "../common-con/con-heading";
 import SocialLinks from "../common-con/social-links";
+import { motion } from "framer-motion";
 
 // react-icon // 
 import { MdEmail } from "react-icons/md";
@@ -13,7 +15,7 @@ function Contact() {
     // Whether you have a question, want to collaborate, or just want to say hi — I'd love to hear from you!
     //I'm always open to meaningful conversations and creative ideas. Feel free to reach out anytime!
     return (
-        <section id="contact">
+        <motion.section id="contact" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
         <div className="w-full flex flex-col items-center justify-center gap-y-10 px-4">
             <ConHeading text='CONTACT ME' />
             <div className="mt-6 w-full ">
@@ -21,18 +23,18 @@ function Contact() {
                 <div className="w-fulll min-h-[80vh] grid grid-cols-2">
                     <div className="flex items-center justify-center">
                         {/* bg-[#ffb800] */}
-                        <div className="drop-shadow-lg w-[65%] flex flex-col gap-y-6 bg-teal-500 rounded-3xl px-6 py-8">
-                            <h2 className='font-medium text-sm'> <span className="bg-[#202020] text-white rounded-full px-2 py-2">Say, Hello</span> </h2>
+                        <div className=" w-[65%] flex flex-col gap-y-6 border-2  border-slate-300 dark:border-slate-800 rounded-3xl px-6 py-8">
+                            <h2 className='font-medium text-sm'> <span className=" text-black dark:text-white">Say, Hello</span>  <span className="text-red-500 font-medium">[ the form it's not working yet ]</span> </h2>
                             <div>
-                            <input className='px-5 py-3 rounded-md outline-0 bg-white w-full' type="text" placeholder="Enter your name" />
+                            <input className='border px-5 py-3 rounded-md outline-0 bg-white dark:bg-transparent w-full' type="text" placeholder="Enter your name" />
                             </div>
 
                             <div>
-                            <input className='px-5 py-3 rounded-md outline-0 bg-white w-full' type="email" placeholder="Enter your email" />
+                            <input className='border px-5 py-3 rounded-md outline-0 bg-white dark:bg-transparent w-full' type="email" placeholder="Enter your email" />
                             </div>
 
                             <div>
-                            <textarea className="px-5 py-3 outline-0 w-full bg-white h-40 rounded-md" placeholder="write your message"></textarea>
+                            <textarea className="border px-5 py-3 outline-0 w-full bg-white h-40 rounded-md dark:bg-transparent" placeholder="write your message"></textarea>
                             </div>
 
                             <div>
@@ -50,9 +52,9 @@ function Contact() {
                             <div className="flex gap-x-8 mb-4">
 
                             {/* bg-[#a8fc00] */}
-                            <div className='flex items-center gap-x-3'> <div className="bg-teal-500 size-12 rounded-full flex items-center justify-center"><MdEmail className="text-2xl text-white" /></div> <span className="text-[#003631] font-medium"> Email <br /> <Link href={'mailto:'}>aryandhamale072gmail.com</Link> </span> </div>
+                            <div className='flex items-center gap-x-3'> <div className="bg-slate-300 size-12 rounded-full flex items-center justify-center"><MdEmail className="text-2xl text-white" /></div> <span className="text-[#003631] dark:text-white font-medium"> Email <br /> <Link href={'mailto:'}>aryandhamale072gmail.com</Link> </span> </div>
                             
-                            <div className='flex items-center gap-x-3'> <div className="bg-teal-500 size-12 rounded-full flex items-center justify-center"><FaPhoneAlt className="text-2xl text-white" /></div> <span className="text-[#003631] font-medium"> Phone <br /> +91 8446162375</span> </div>
+                            <div className='flex items-center gap-x-3'> <div className="bg-slate-300 size-12 rounded-full flex items-center justify-center"><FaPhoneAlt className="text-2xl text-white" /></div> <span className="text-[#003631] font-medium"> Phone <br /> +91 8446162375</span> </div>
 
                             </div>
 
@@ -66,7 +68,7 @@ function Contact() {
                 </div>
             </div>
         </div>
-        </section>
+        </motion.section>
     );
 }
 

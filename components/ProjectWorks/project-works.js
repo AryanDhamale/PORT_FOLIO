@@ -1,7 +1,7 @@
 "use client";
 
 import ConHeading from "../common-con/con-heading";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion , AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -73,7 +73,7 @@ function ProjectWork() {
 
 
   return (
-    <section id="projects">
+    <motion.section id="projects" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
     {slider.visible && <ImageSlider control={setslider} imgNo={slider.imgNo}/> } 
     <div className="w-full ">
       <ConHeading text='PROJECT WORK' />
@@ -163,7 +163,7 @@ function ProjectWork() {
         </div>
       </div>
     </div>
-    </section>
+    </motion.section>
   );
 }
 
