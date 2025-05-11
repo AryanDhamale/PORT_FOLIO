@@ -19,11 +19,11 @@ function Contact() {
         <div className="w-full flex flex-col items-center justify-center gap-y-10 px-4">
             <ConHeading text='CONTACT ME' />
             <div className="mt-6 w-full ">
-                <h1 className="text-center font-medium text-xl text-gray-700">Whether you have a question, want to collaborate, or just want to say hi — I&apos;d love to hear from you!</h1>
-                <div className="w-fulll min-h-[80vh] grid grid-cols-2">
+                <h1 className="mb-10 xl:mb-0 text-center font-medium text-xl text-gray-700">Whether you have a question, want to collaborate, or just want to say hi — I&apos;d love to hear from you!</h1>
+                <div className="w-full min-h-[80vh] grid grid-cols-1 xl:grid-cols-2 gap-y-10">
                     <div className="flex items-center justify-center">
                         {/* bg-[#ffb800] */}
-                        <div className=" w-[65%] flex flex-col gap-y-6 border-2  border-slate-300 dark:border-slate-800 rounded-3xl px-6 py-8">
+                        <div className="w-full sm:w-4/5 md:w-[65%] flex flex-col gap-y-6 border-2  border-slate-300 dark:border-slate-800 rounded-3xl px-6 py-8">
                             <h2 className='font-medium text-sm'> <span className=" text-black dark:text-white">Say, Hello</span>  <span className="text-red-500 font-medium">[ the form it&apos;s not working yet ]</span> </h2>
                             <div>
                             <input className='border px-5 py-3 rounded-md outline-0 bg-white dark:bg-transparent w-full' type="text" placeholder="Enter your name" />
@@ -45,11 +45,11 @@ function Contact() {
 
 
                     <div className="flex items-center justify-center">
-                        <div className="w-[95%] flex flex-col gap-y-6">
-                            <h1 className="text-6xl font-medium">I&apos;d love to hear from you</h1>
+                        <div className="w-full sm:w-4/5 md:w-[70%] xl:w-[95%] flex flex-col gap-y-6">
+                            <h1 className="text-4xl xl:text-6xl font-medium">I&apos;d love to hear from you</h1>
                             <h2 className="mb-4 font-light text-xl opacity-60">I&apos;m always open to meaningful conversations and creative ideas. Feel free to reach out anytime!</h2>
                             {/* contact - info */}
-                            <div className="flex gap-x-8 mb-4">
+                            <div className="grid grid-cols-1 min-[740px]:grid-cols-2 gap-y-4 min-[740px]:gap-x-8 mb-4">
 
                             {/* bg-[#a8fc00] */}
                             <div className='flex items-center gap-x-3'> <div className="bg-slate-300 size-12 rounded-full flex items-center justify-center"><MdEmail className="text-2xl text-white" /></div> <span className="text-[#003631] dark:text-white font-medium"> Email <br /> <Link href={'mailto:'}>aryandhamale072gmail.com</Link> </span> </div>

@@ -37,7 +37,7 @@ function SocialLinks()
         }
     ]
     return (
-        <div className="flex gap-x-5">
+        <div className="flex max-[430px]:justify-center gap-x-5">
 
             {/* {
                 Links.map((ele,idx)=><div key={ele.name} className="bg-[#202020] text-white rounded-full w-[150px] py-3 gap-x-2 flex items-center justify-center"> {ele.logo} <span className="text-lg">{ele.name}</span> </div>)

@@ -75,10 +75,10 @@ function ProjectWork() {
   return (
     <motion.section id="projects" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
     {slider.visible && <ImageSlider control={setslider} imgNo={slider.imgNo}/> } 
-    <div className="w-full ">
+    <div className="w-full">
       <ConHeading text='PROJECT WORK' />
       {/* min-h-80vh */}
-      <div className="mt-6 h-[80vh] w-full flex px-6">
+      <div className="mt-6 h-[80vh] w-full hidden min-[930px]:flex px-6">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex items-center w-[90%] h-4/5">
             <ul className='w-full px-2 flex flex-col gap-y-8'>
@@ -99,7 +99,7 @@ function ProjectWork() {
                   <div className="w-[55%] flex items-center justify-center">
                     <div className="w-[95%] flex flex-col gap-y-4 text-gray-800">
                       <h2 className="font-semibold text-2xl">{ele.name}</h2>
-                      <p className='font-light text-lg'>{ele.info}</p>
+                      <p className='font-base text-md'>{ele.info}</p>
                       <h3 className="text-lg font-medium">Website</h3>
                       {/* live here */}
                       <Link href={ele.link}>

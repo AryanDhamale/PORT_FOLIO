@@ -25,7 +25,7 @@ const CircularProgress = ({ percentage }) => {
           cy={radius}
         />
         <circle
-          stroke="#4ea88a" // Tailwind blue-500
+          stroke="#4ea88a" // Tailwind blue-500 // #4ea88a
           fill="transparent"
           strokeWidth={stroke}
           strokeLinecap="round"

@@ -2,7 +2,7 @@
 import ConHeading from "../common-con/con-heading";
 import CircularProgress from "../common-con/circular-progress";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 
 function Skills() {
     const skills = [
@@ -43,12 +43,12 @@ function Skills() {
         <motion.section id="skills" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
         <div className="w-full flex flex-col gap-y-10">
             <ConHeading text='SKILLS' />
-            <div className="mt-8 w-full min-h-[80vh] grid grid-cols-2 gap-y-5 ps-10 pe-9">
+            <div className="mt-8 w-full min-h-[80vh] grid grid-cols-1 min-[930px]:grid-cols-2 gap-y-5  sm:ps-10 sm:pe-9">
                 
 
                     {skills.length > 0 && skills.map((el,idx)=> 
                     <div key={el.heading} className="flex items-start justify-center">
-                    <motion.div whileHover={{borderRadius:'30px'}} transition={{duration:0.3}} className=" bg-white border-2 border-green-200 bg-surface-alpha backdrop-blur-md w-4/5 h-[320px] px-5 rounded-xl dark:bg-transparent flex flex-col justify-center gap-y-4">
+                    <motion.div whileHover={{borderRadius:'35px'}} transition={{duration:0.3}} className=" bg-white border-2 border-green-200 bg-surface-alpha backdrop-blur-md w-full min-[500px]:w-4/5 h-[320px] px-5 rounded-xl dark:bg-transparent flex flex-col justify-center gap-y-4">
                         {/* heading */}
                         <div>
                             <h2 className="text-lg font-medium text-[#4ea88a]">{el.heading}</h2>
