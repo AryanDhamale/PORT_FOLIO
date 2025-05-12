@@ -54,7 +54,7 @@ function Contact() {
                             {/* bg-[#a8fc00] */}
                             <div className='flex items-center gap-x-3'> <div className="bg-slate-300 size-12 rounded-full flex items-center justify-center"><MdEmail className="text-2xl text-white" /></div> <span className="text-[#003631] dark:text-white font-medium"> Email <br /> <Link href={'mailto:'}>aryandhamale072gmail.com</Link> </span> </div>
                             
-                            <div className='flex items-center gap-x-3'> <div className="bg-slate-300 size-12 rounded-full flex items-center justify-center"><FaPhoneAlt className="text-2xl text-white" /></div> <span className="text-[#003631] font-medium"> Phone <br /> +91 8446162375</span> </div>
+                            <div className='flex items-center gap-x-3'> <div className="bg-slate-300 size-12 rounded-full flex items-center justify-center"><FaPhoneAlt className="text-2xl text-white" /></div> <span className="text-[#003631] dark:text-white font-medium"> Phone <br /> +91 8446162375</span> </div>
 
                             </div>
 
