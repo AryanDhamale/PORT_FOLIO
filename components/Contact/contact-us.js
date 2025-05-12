@@ -23,7 +23,7 @@ function Contact() {
                 <div className="w-full min-h-[80vh] grid grid-cols-1 xl:grid-cols-2 gap-y-10">
                     <div className="flex items-center justify-center">
                         {/* bg-[#ffb800] */}
-                        <div className="w-full sm:w-4/5 md:w-[65%] flex flex-col gap-y-6 border-2  border-slate-300 dark:border-slate-800 rounded-3xl px-6 py-8">
+                        <div className="w-full sm:w-4/5 md:w-[65%] flex flex-col gap-y-6 border-2  border-slate-300 dark:border-slate-800 rounded-3xl px-6 py-8 drop-shadow-[0_6px_10px_#449c7f1f]">
                             <h2 className='font-medium text-sm'> <span className=" text-black dark:text-white">Say, Hello</span>  <span className="text-red-500 font-medium">[ the form it&apos;s not working yet ]</span> </h2>
                             <div>
                             <input className='border px-5 py-3 rounded-md outline-0 bg-white dark:bg-transparent w-full' type="text" placeholder="Enter your name" />

@@ -34,8 +34,8 @@ function About() {
 
                     <div className="flex justify-center items-center">
                         <div className="w-full md:w-[90%] h-auto xl:h-4/5 text-gray-800 dark:text-white flex flex-col gap-y-3">
-                            <h2 className="font-semibold text-3xl"> Hi There! I&apos;m <span className="text-[#4ea88a]">Tejas Dhamale </span> </h2>
-                            <h2 className="font-medium text-2xl text-[#4ea88a]">FULL STACK WEB-DEVELOPER</h2>
+                            <h2 className="font-semibold text-2xl sm:text-3xl"> Hi There! I&apos;m <span className="text-[#4ea88a]">Tejas Dhamale </span> </h2>
+                            <h2 className="font-medium text-xl sm:text-2xl text-[#4ea88a]">FULL STACK WEB-DEVELOPER</h2>
                             <div className="flex flex-col gap-y-5 font-medium opacity-70">
                                 <p>Hi, I’m a passionate full-stack web developer with a deep interest in building scalable, real-time, and interactive web applications. I specialize in modern JavaScript frameworks like <b>React.js</b> and <b>Next.js</b>, and I’m constantly exploring new technologies to deliver fast, user-friendly digital experiences.</p>
 

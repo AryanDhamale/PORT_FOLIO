@@ -57,7 +57,7 @@ function Navbar() {
                     <ModeToggle  />
                     <Drawer>
                         <DrawerTrigger >
-                            <Button variant={'secondary'}> <Menu /> </Button>
+                            <Button variant="outline" size="icon"> <Menu /> </Button>
                         </DrawerTrigger>
 
                         <DrawerContent className={'bg-surface-alpha backdrop-blur-md'}>

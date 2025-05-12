@@ -43,7 +43,7 @@ function Skills() {
         <motion.section id="skills" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
         <div className="w-full flex flex-col gap-y-10">
             <ConHeading text='SKILLS' />
-            <div className="mt-8 w-full min-h-[80vh] grid grid-cols-1 min-[930px]:grid-cols-2 gap-y-5  sm:ps-10 sm:pe-9">
+            <div className="mt-8 w-full min-h-[80vh] grid grid-cols-1 min-[930px]:grid-cols-2 gap-y-5  px-4 sm:ps-10 sm:pe-9">
                 
 
                     {skills.length > 0 && skills.map((el,idx)=> 
@@ -61,7 +61,7 @@ function Skills() {
                         <div className="">
                             <ul className="flex flex-col gap-y-4">
                                 {
-                                    el.skills.map((ele,idx)=><li key={idx} className="flex items-center gap-x-3"> <div className=""><CircularProgress percentage={ele.percent}/></div> <div className="text-base font-medium"><span className="text-[#4ea88a]">{ele.title}</span> <span className="opacity-40"> {ele.list && `= [ ${ele.list} ]`} </span></div> </li>)
+                                    el.skills.map((ele,idx)=><li key={idx} className="flex items-center gap-x-3"> <div className=""><CircularProgress percentage={ele.percent}/></div> <div className="text-sm sm:text-base font-medium"><span className="text-[#4ea88a]">{ele.title}</span> <span className="opacity-40"> {ele.list && `= [ ${ele.list} ]`} </span></div> </li>)
                                 }       
 
                             </ul>
