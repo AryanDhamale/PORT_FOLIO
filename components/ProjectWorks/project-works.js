@@ -108,7 +108,7 @@ function ProjectWork() {
                     </div>
                   </div>
                   <div className="flex-1 flex items-center">
-                    <Image onClick={()=>setslider({visible:true,imgNo:ele.idx})} width={100} height={100} unoptimized className="w-full rounded-md cursor-pointer" src={ele.image} alt="This is an Dribbble image" />
+                    <Image onClick={()=>setslider({visible:true,imgNo:ele.idx})} width={1895} height={910} className="w-full rounded-md cursor-pointer" src={ele.image} alt="This is an Dribbble image" />
                   </div>
                 </motion.div>
               </AnimatePresence>

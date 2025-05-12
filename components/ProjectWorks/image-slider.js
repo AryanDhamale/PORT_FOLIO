@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
+import ImageLoader from "../common-con/image-loader";
 
 function ImageSlider({imgNo,control})
 {
@@ -19,7 +20,7 @@ function ImageSlider({imgNo,control})
         setcurrImage(index);
     }
     return (
-        <div className="flex items-center justify-center gap-x-30 w-full h-screen z-[10] fixed top-0 left-0 bg-[#000000b3]">
+        <div className="flex items-center justify-center gap-x-30 w-full h-[100vh] z-[20] fixed top-0 left-0 bg-[#000000b3]">
 
             <div className="absolute left-11 top-10"> <span onClick={()=>control((oldVal)=>({...oldVal,visible:false}))} className="text-white font-medium cursor-pointer">Close</span> </div>
 
@@ -28,7 +29,11 @@ function ImageSlider({imgNo,control})
 
             <AnimatePresence>
             <motion.div initial={{x:-10,opacity:0}} animate={{x:0,opacity:1}} exit={{x:10,opacity:0}} transition={{type:'spring',duration:0.5}} className='w-7/10'>
-             <Image className="w-full rounded-md" width={100} height={100} unoptimized src={'/projects/'+imageArray[currentImage]} alt="This is an image"/>
+
+             {/* image loader will here */}
+             <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/>
+
+
             </motion.div>
             </AnimatePresence>
 
