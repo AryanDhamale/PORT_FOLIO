@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import ImageSlider from "./image-slider";
+import ProjectSlider from "./project-slider";
 
 // react-icons // 
 import { GoArrowUpRight } from "react-icons/go";
@@ -78,7 +79,11 @@ function ProjectWork() {
     <div className="w-full">
       <ConHeading text='PROJECT WORK' />
       {/* min-h-80vh */}
-      <div className="mt-6 h-[80vh] w-full hidden min-[930px]:flex px-6">
+      
+      {/* for responsive ness */}
+      <ProjectSlider sliderControl={setslider}/>  
+     
+      <div className="mt-6 min-h-[80vh] w-full hidden min-[930px]:flex px-6">
         <div className="flex-1 flex items-center justify-center">
           <div className="flex items-center w-[90%] h-4/5">
             <ul className='w-full px-2 flex flex-col gap-y-8'>

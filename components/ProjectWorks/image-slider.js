@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import { FaAngleLeft } from "react-icons/fa6";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft , FaAngleRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
-import ImageLoader from "../common-con/image-loader";
 
 function ImageSlider({imgNo,control})
 {
@@ -27,8 +25,8 @@ function ImageSlider({imgNo,control})
             {/* left */}
             <div onClick={prevSlide} className="size-12 rounded-full flex justify-center items-center bg-white cursor-pointer"> <FaAngleLeft className="text-xl text-black"/> </div>
 
-            <AnimatePresence>
-            <motion.div initial={{x:-10,opacity:0}} animate={{x:0,opacity:1}} exit={{x:10,opacity:0}} transition={{type:'spring',duration:0.5}} className='w-7/10'>
+            <AnimatePresence key={currentImage}>
+            <motion.div initial={{x:-20,opacity:0}} animate={{x:0,opacity:1}} exit={{x:20,opacity:0}} transition={{type:'spring',duration:1}} className='w-7/10'>
 
              {/* image loader will here */}
              <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/>

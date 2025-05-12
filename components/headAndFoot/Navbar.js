@@ -56,7 +56,7 @@ function Navbar() {
                 <div className="flex gap-x-4 lg:hidden">
                     <ModeToggle  />
                     <Drawer>
-                        <DrawerTrigger >
+                        <DrawerTrigger asChild>
                             <Button variant="outline" size="icon"> <Menu /> </Button>
                         </DrawerTrigger>
 
