@@ -48,7 +48,7 @@ function Skills() {
 
                     {skills.length > 0 && skills.map((el,idx)=> 
                     <div key={el.heading} className="flex items-start justify-center">
-                    <motion.div whileHover={{borderRadius:'35px'}} transition={{duration:0.3}} className=" bg-white border-2 border-green-200 bg-surface-alpha backdrop-blur-md w-full min-[500px]:w-4/5 h-[320px] px-5 rounded-xl dark:bg-transparent flex flex-col justify-center gap-y-4">
+                    <motion.div whileTap={{borderRadius:'35px'}} whileHover={{borderRadius:'35px'}} transition={{duration:0.3}} className=" bg-white border-2 border-green-200 bg-surface-alpha backdrop-blur-md w-full min-[500px]:w-4/5 h-[320px] px-5 rounded-xl dark:bg-transparent flex flex-col justify-center gap-y-4">
                         {/* heading */}
                         <div>
                             <h2 className="text-lg font-medium text-[#4ea88a]">{el.heading}</h2>

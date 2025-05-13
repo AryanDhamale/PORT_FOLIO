@@ -11,8 +11,8 @@ import { Suspense } from "react";
 
 function Home() {
   return (
-    // #f6fbf9
-    <div className="bg-[#f6fbf9] dark:bg-slate-800/50">
+    // background-#f6fbf9 dark-#020204 mid-#09070e light-#2b2441
+    <div className="bg-[#f6fbf9] dark:bg-[#020204]">
       <Suspense fallback={<Loader />}>
         <Navbar />
         <main className="flex flex-col gap-y-40">

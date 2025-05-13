@@ -45,7 +45,7 @@ function About() {
                             </div>
                             <div className="mt-2">
                                 {/* CTA  */}
-                                <button disabled={btnText.disable} onClick={downloadCv} className="cursor-pointer flex items-center justify-between px-2 rounded-full py-2 bg-[#003631] w-[190px]">
+                                <button disabled={btnText.disable} onClick={downloadCv} className="cursor-pointer flex items-center justify-between px-2 rounded-full py-2 bg-[#003631] dark:bg-[#0e151b] dark:border-2  w-[190px]">
                                     <span className="font-medium text-lg text-[#a8fc00] ps-3">{btnText.text}</span>
                                     {!btnText.disable ? <div className="size-11 rounded-full bg-[#a8fc00] flex justify-center items-center"><GoArrowUpRight className="text-xl text-[#003732]" /></div> : 
                                     <div className="size-11 flex items-center justify-center">
