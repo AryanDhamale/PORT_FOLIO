@@ -25,7 +25,7 @@ function About() {
                 <div className="mt-6 min-h-[80vh] w-full grid grid-cols-1 xl:grid-cols-2 gap-y-10 px-4 sm:px-10">
                     <div className="flex justify-center items-center ">
                         <div className="w-full min-[430px]:w-4/5 md:w-1/2 h-[500px] xl:h-4/5 relative">
-                            <Image width={570} height={514} src={'https://devis-react.vercel.app/images/section/about.jpg'} alt="this is an image" className="w-full h-full rounded-3xl object-cover drop-shadow-[0_6px_10px_#449c7f1f]" />
+                            <Image width={570} height={514} src={'/user/user.jpg'} alt="this is an image" className="w-full h-full rounded-3xl object-cover drop-shadow-[0_6px_10px_#449c7f1f]" />
                             <Image width={100} height={100} className="dark:hidden max-[768px]:hidden absolute top-0 -left-30" src={'/background/star.png'} alt="this is an image"/>
                             <Image width={100} height={100} className="dark:hidden max-[768px]:hidden absolute bottom-0 -right-30" src={'/background/star.png'} alt="this is an image"/>
                         </div>
