@@ -33,13 +33,13 @@ function Services() {
                 {/* card-box */}
                 {cards.length>0 && cards.map((el,idx)=> <div key={el.title} className='flex items-center justify-center'>
                     {/* actual card */}
-                    <motion.div whileHover={{y:-10}} transition={{type:'spring',duration:0.5}} className="bg-white border-2 border-green-200 dark:bg-transparent rounded-3xl ps-5 pe-4 w-full sm:w-4/5 h-[270px] flex flex-col justify-center gap-y-4">
+                    <motion.div whileHover={{y:-10}} transition={{type:'spring',duration:0.5}} className="select-none border bg-[#171717] hover:bg-[#262626] rounded-3xl ps-5 pe-4 w-full sm:w-4/5 h-[270px] flex flex-col justify-center gap-y-4">
 
                     {/* heading */}
-                    <h2 className="text-2xl text-[#4ea88a] font-semibold">{el.title}</h2>
+                    <h2 className="text-2xl text-[#5d7cae] font-semibold">{el.title}</h2>
 
                     {/* info */}
-                    <p className="text-md font-normal opacity-70">{el.info}</p>
+                    <p className="text-md font-normal opacity-70 ">{el.info}</p>
 
                     </motion.div>
 

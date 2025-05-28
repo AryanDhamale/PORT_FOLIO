@@ -18,15 +18,15 @@ function ImageSlider({imgNo,control})
         setcurrImage(index);
     }
     return (
-        <div className="flex items-center justify-center gap-x-30 w-full h-[100vh] z-[20] fixed top-0 left-0 bg-[#000000b3]">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-x-30 w-full min-h-screen z-[20] fixed top-0 left-0 bottom-0 bg-[#2b323e82]">
 
-            <div className="absolute left-11 top-10"> <span onClick={()=>control((oldVal)=>({...oldVal,visible:false}))} className="text-white font-medium cursor-pointer">Close</span> </div>
+            <div className="absolute left-11 top-10"> <span onClick={()=>control((oldVal)=>({...oldVal,visible:false}))} className="text-blue-500 px-3 py-1 rounded-full bg-white text-sm font-medium cursor-pointer">Close</span> </div>
 
             {/* left */}
-            <div onClick={prevSlide} className="size-12 rounded-full flex justify-center items-center bg-white cursor-pointer"> <FaAngleLeft className="text-xl text-black"/> </div>
+            <div onClick={prevSlide} className="size-12 rounded-full hidden md:flex  justify-center items-center bg-white cursor-pointer"> <FaAngleLeft className="text-xl text-blue-500"/> </div>
 
             <AnimatePresence key={currentImage}>
-            <motion.div initial={{x:-20,opacity:0}} animate={{x:0,opacity:1}} exit={{x:20,opacity:0}} transition={{type:'spring',duration:1}} className='w-7/10'>
+            <motion.div initial={{x:-20,opacity:0}} animate={{x:0,opacity:1}} exit={{x:20,opacity:0}} transition={{type:'spring',duration:0.5}} className='w-9/10 md:w-7/10'>
 
              {/* image loader will here */}
              <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/>
@@ -36,7 +36,13 @@ function ImageSlider({imgNo,control})
             </AnimatePresence>
 
             {/* right */}
-            <div onClick={nextSlide} className="size-12 rounded-full flex justify-center items-center bg-white cursor-pointer"> <FaAngleRight className="text-xl text-black"/> </div>
+            <div onClick={nextSlide} className="size-12 rounded-full hidden md:flex justify-center items-center bg-white cursor-pointer"> <FaAngleRight className="text-xl text-blue-500"/> </div>
+
+            {/* for less than < md */}
+            <div className="flex items-center gap-x-4 md:hidden mt-6">
+                <div onClick={prevSlide} className="size-10 rounded-full flex  justify-center items-center active:bg-blue-500/90 bg-blue-500 cursor-pointer"> <FaAngleLeft className="text-lg text-white"/> </div>
+                <div onClick={nextSlide} className="size-10 rounded-full flex  justify-center items-center active:bg-blue-500/90 bg-blue-500 cursor-pointer"> <FaAngleRight className="text-lg text-white"/> </div>
+            </div>
         </div>
     );
 
