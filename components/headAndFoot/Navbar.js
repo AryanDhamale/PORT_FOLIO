@@ -39,9 +39,9 @@ function Navbar() {
                             sections.map((ele) => <li key={ele}><ScrollLink to={ele[0].toLowerCase() + ele.slice(1)} spy={true} smooth={true} duration={600} activeClass="rounded-full bg-white text-blue-400" className="text-base font-normal cursor-pointer hover:text-blue-400 px-4 py-2">{ele}</ScrollLink></li>)
                         }
 
-                        <li> | </li>
+                        <li className='text-white'> | </li>
 
-                        <li><Link href="/notes" className="text-base font-normal cursor-pointer hover:text-blue-400 px-4 py-2">Notes</Link></li>
+                        <li><Link href="/notes" className="text-base font-normal cursor-pointer text-white hover:text-blue-400 px-4 py-2">Notes</Link></li>
 
                     </ul>
                 </div>

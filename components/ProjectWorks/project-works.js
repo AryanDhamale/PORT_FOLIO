@@ -134,7 +134,7 @@ function ProjectWork() {
           <div className="flex items-center w-[90%] h-4/5">
             <ul className='w-full px-2 flex flex-col gap-y-8'>
               {
-                projectNames.map((ele) => <motion.li initial={{x:0}} whileHover={{x:10}} transition={{type:'spring',duration:0.9}} key={ele} onClick={() => setcurrentProject(ele)} className="cursor-pointer flex items-center gap-x-3"> {currentProject===ele ? <><div className='w-[29px] dark:border-white opacity-90  border border-black' /> <span className='text-lg font-light text-white opacity-90  '>{ele}</span> </> 
+                projectNames.map((ele) => <motion.li initial={{x:0}} whileHover={{x:10}} transition={{type:'spring',duration:0.9}} key={ele} onClick={() => setcurrentProject(ele)} className="cursor-pointer flex items-center gap-x-3"> {currentProject===ele ? <><div className='w-[29px] border-white opacity-90  border' /> <span className='text-lg font-light text-white opacity-90  '>{ele}</span> </> 
                 : <> <div className='w-[22px] border border-[var(--brand-color)]' /> <span className='text-lg font-medium text-[var(--brand-color)]'>{ele}</span> </> }  </motion.li>)
               }
             </ul>
@@ -159,7 +159,7 @@ function ProjectWork() {
 
 
                         <div className="h-full px-2">
-                          <ul className="h-full text-sm opacity-90 flex flex-col justify-center gap-y-2">
+                          <ul className="h-full text-sm text-white opacity-90 flex flex-col justify-center gap-y-2">
                             <li className="font-medium">{ele.info.heading}</li>
                             {
                               ele.info.keypoints.map((el,idx)=>
@@ -182,7 +182,7 @@ function ProjectWork() {
                       
                       {/* live here */}
                       <Link href={ele.link}>
-                      <button className="px-6 py-2 bg-blue-500 font-light rounded-full cursor-pointer">Live here</button>
+                      <button className="px-6 py-2 bg-blue-500 text-white font-light rounded-full cursor-pointer">Live here</button>
                       </Link> 
                     </div>
                   </div>
@@ -200,8 +200,8 @@ function ProjectWork() {
       
       {/* see more projects */}
       <div className="mt-5 flex items-center justify-center gap-x-6"> 
-        <h1 className="text-lg font-light opacity-80">Want to see more project</h1>
-        <button className="px-5 py-2 rounded-full bg-blue-500 font-light hover:bg-blue-500/90 cursor-pointer">See More</button>
+        <h1 className="text-lg text-white font-light opacity-80">Want to see more project</h1>
+        <button className="px-5 py-2 rounded-full text-white bg-blue-500 font-light hover:bg-blue-500/90 cursor-pointer">See More</button>
       </div>
 
     </div>

@@ -19,7 +19,7 @@ function Contact() {
         <motion.section id="contact" initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
             <div className="w-full flex flex-col items-center justify-center gap-y-10 px-4">
                 <ConHeading text='CONTACT ME' />
-                <div className="mt-6 w-full min-h-[70vh] flex flex-col gap-y-3">
+                <div className="mt-6 w-full min-h-[70vh] flex flex-col gap-y-3 text-white">
                     <h1 className="text-center font-light text-2xl opacity-80">Whether you have a question, want to collaborate, or just want to say hi — I&apos;d love to hear from you!</h1>
                     
                     <div className="w-full flex-1 flex items-center justify-center">

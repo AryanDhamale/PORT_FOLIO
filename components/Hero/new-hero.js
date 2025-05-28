@@ -15,7 +15,7 @@ function Hero()
           Hi, I&apos;m Tejas. I build real-time, full-stack web apps with solid UI/UX and scalable backend tech. Let&apos;s build something awesome.
           </h1>
           <h2 className="text-white text-xl md:text-3xl opacity-80 font-light">Full-stack developer. UI enthusiast. Builder of modern web apps using React, Next.js & Node. Currently geeking out over real-time features & CI/CD workflows.</h2>
-          <Link to="contact" smooth={true} duration={600}> <button className="mt-2 px-5 py-3 rounded-full bg-blue-500 active:bg-blue-600 cursor-pointer"> <span className="font-light">Let&apos;s Connect</span> </button> </Link>
+          <Link to="contact" smooth={true} duration={600}> <button className="mt-2 px-5 py-3 rounded-full text-white bg-blue-500 active:bg-blue-600 cursor-pointer"> <span className="font-light">Let&apos;s Connect</span> </button> </Link>
           
         </div>
     </div>

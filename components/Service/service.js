@@ -39,7 +39,7 @@ function Services() {
                     <h2 className="text-2xl text-[#5d7cae] font-semibold">{el.title}</h2>
 
                     {/* info */}
-                    <p className="text-md font-normal opacity-70 ">{el.info}</p>
+                    <p className="text-md font-normal text-white opacity-70 ">{el.info}</p>
 
                     </motion.div>
 
