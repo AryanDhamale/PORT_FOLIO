@@ -119,7 +119,7 @@ function ProjectSlider({sliderControl}) {
                         {/* information box - child */}
                         <div className="w-full flex flex-col gap-y-4 ">
                             {/* information here */}
-                            <div className="max-[630px]:h-[230px] border border-red-500">
+                            <div className="max-[630px]:h-[230px]">
                                 <h1 className="text-xl text-blue-500 font-medium italic mb-2">{allProjects[currentIDX].name}</h1>
                                 <ul className="text-sm font-light flex flex-col gap-y-2 tracking-wider">
                                     {
