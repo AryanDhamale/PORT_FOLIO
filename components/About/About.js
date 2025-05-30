@@ -1,11 +1,10 @@
 "use client"
-// import { useState } from "react";
-// import { useRouter } from "next/navigation";
+
 import ConHeading from "../common-con/con-heading";
-//import CTA from "../common-con/cta-button";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ImageLoader from "../common-con/image-loader";
 
 function About() {
 
@@ -22,7 +21,8 @@ function About() {
                 <div className="mt-6 min-h-[80vh] w-full grid grid-cols-1 xl:grid-cols-2 gap-y-10 px-4 sm:px-10">
                     <div className="flex justify-center items-center ">
                         <div className="w-full min-[430px]:w-4/5 md:w-1/2 h-[500px] xl:h-4/5 relative">
-                            <Image width={570} height={514} src={'/user/user.jpg'} alt="this is an image" className="w-full h-full rounded-3xl object-cover" />
+                            <ImageLoader loadingStyle={'w-full h-full'} url='/user/user.jpg' style={'w-full h-full rounded-3xl object-cover'} dimension={{width:570,height:514}}/>
+                            {/* <Image width={570} height={514} src={'/user/user.jpg'} alt="this is an image" className="w-full h-full rounded-3xl object-cover" /> */}
                         </div>
                     </div>
 

@@ -1,22 +1,23 @@
-"use client";
+"use client"
 import { useState } from "react";
-import { Skeleton } from "@/components/ui/skeleton";
-import dynamic from "next/dynamic";
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import loader from "@/LottieJSON/Loader.json";
 import Image from "next/image";
+// react icons // 
+import { FaMountainSun } from "react-icons/fa6";
 
-
-function ImageLoader({ conWidth, conHeight , width, height, className, src }) {
-    const [isLoading, setisLoading] = useState(true);
+function ImageLoader({ url, loadingStyle, style, dimension }) {
+    const [isloading, setIsloading] = useState(true);
+    
     return (
         <>
-            { isLoading ? <div className="relative">
-            <Skeleton className={`border border-red-500 w-${conWidth} h-${conHeight} rounded-md`}/>
-            <Lottie className="absolute top-1/2 left-1/2  -transform -translate-1/2 size-[150px]" animationData={loader} />
-            </div> :
-            <Image className={className} width={width} height={height} src={src} alt="This is an image" />
-          }
+            {isloading && <div className={`${loadingStyle} rounded-3xl bg-[var(--brand-color)]/25 backdrop-blur-md flex items-center justify-center`}>
+                <div className="relative flex items-center justify-center w-15 h-15">
+                    <div className="absolute w-full h-full rounded-full border-4 border-t-transparent border-blue-500 animate-spin" />
+                    <span className="text-xl  text-blue-600 z-10"> <FaMountainSun/> </span>
+                </div>
+            </div>}
+
+            <Image width={dimension.width} height={dimension.height} src={url} alt="this is an image" className={`${isloading ? 'w-0 h-0' : style }`} onLoad={() => setIsloading(false)} />
+
         </>
     );
 }

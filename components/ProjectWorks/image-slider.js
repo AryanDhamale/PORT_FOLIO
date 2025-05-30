@@ -1,7 +1,8 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { useState } from "react";
 import { FaAngleLeft , FaAngleRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
+import ImageLoader from "../common-con/image-loader";
 
 function ImageSlider({imgNo,control})
 {
@@ -29,7 +30,8 @@ function ImageSlider({imgNo,control})
             <motion.div initial={{x:-20,opacity:0}} animate={{x:0,opacity:1}} exit={{x:20,opacity:0}} transition={{type:'spring',duration:0.5}} className='w-9/10 md:w-7/10'>
 
              {/* image loader will here */}
-             <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/>
+             <ImageLoader url={'/projects/'+imageArray[currentImage]} loadingStyle={'w-full h-[500px]'} style={'w-full rounded-md'} dimension={{width:1912,height:908}}/>
+             {/* <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/> */}
 
 
             </motion.div>

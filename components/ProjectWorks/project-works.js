@@ -2,12 +2,13 @@
 
 import ConHeading from "../common-con/con-heading";
 import { motion , AnimatePresence } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import ImageSlider from "./image-slider";
 import ProjectSlider from "./project-slider";
 import { useEffect } from "react";
+import ImageLoader from "../common-con/image-loader";
 
 
 function ProjectWork() {
@@ -188,7 +189,8 @@ function ProjectWork() {
                   </div>
                   {/* child-two */}
                   <div className="flex-1 flex items-center">
-                    <Image onClick={()=>setslider({visible:true,imgNo:ele.idx})} width={1895} height={910} className="w-full rounded-md cursor-pointer" src={ele.image} alt="This is an Dribbble image" />
+                    <span className="w-full" onClick={()=>setslider({visible:true,imgNo:ele.idx})}><ImageLoader url={ele.image} loadingStyle={' w-full h-[230px] '} dimension={{width:1895,height:910}} style={'w-full rounded-md cursor-pointer'} /></span>
+                    {/* <Image onClick={()=>setslider({visible:true,imgNo:ele.idx})} width={1895} height={910} className="w-full rounded-md cursor-pointer" src={ele.image} alt="This is an Dribbble image" /> */}
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -201,7 +203,7 @@ function ProjectWork() {
       {/* see more projects */}
       <div className="mt-5 flex items-center justify-center gap-x-6"> 
         <h1 className="text-lg text-white font-light opacity-80">Want to see more project</h1>
-        <button className="px-5 py-2 rounded-full text-white bg-blue-500 font-light hover:bg-blue-500/90 cursor-pointer">See More</button>
+        <Link href={'/more-projects'}><button className="px-5 py-2 rounded-full text-white bg-blue-500 font-light hover:bg-blue-500/90 cursor-pointer">See More</button></Link> 
       </div>
 
     </div>

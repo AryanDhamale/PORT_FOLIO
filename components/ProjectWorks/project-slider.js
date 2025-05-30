@@ -4,7 +4,8 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import ImageLoader from "../common-con/image-loader";
 
 
 // react-icons // 
@@ -135,7 +136,8 @@ function ProjectSlider({sliderControl}) {
 
                     </div>
                     <div className="flex-1 flex items-center justify-center rounded-md">
-                        <Image onClick={()=>sliderControl({visible:true,imgNo:currentIDX})} width={1895} height={910} className="w-full h-[230px] object-cover rounded-md cursor-pointer" src={allProjects[currentIDX].image} alt="This is an image" />
+                        <span className="w-full" onClick={()=>sliderControl({visible:true,imgNo:currentIDX})}> <ImageLoader url={allProjects[currentIDX].image} loadingStyle={'w-full h-[230px]'} style={'w-full h-[230px] object-cover rounded-md cursor-pointer'} dimension={{width:1895,height:910}}/> </span>
+                        {/* <Image onClick={()=>sliderControl({visible:true,imgNo:currentIDX})} width={1895} height={910} className="w-full h-[230px] object-cover rounded-md cursor-pointer" src={allProjects[currentIDX].image} alt="This is an image" /> */}
                     </div>
                 </motion.div>
                 </AnimatePresence>
