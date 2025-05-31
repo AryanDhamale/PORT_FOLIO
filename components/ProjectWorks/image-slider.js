@@ -30,7 +30,7 @@ function ImageSlider({imgNo,control})
             <motion.div initial={{x:-20,opacity:0}} animate={{x:0,opacity:1}} exit={{x:20,opacity:0}} transition={{type:'spring',duration:0.5}} className='w-9/10 md:w-7/10'>
 
              {/* image loader will here */}
-             <ImageLoader url={'/projects/'+imageArray[currentImage]} loadingStyle={'w-full h-[500px]'} style={'w-full rounded-md'} dimension={{width:1912,height:908}}/>
+             <ImageLoader url={'/projects/'+imageArray[currentImage]} loadingStyle={'w-full h-[300px] md:h-[500px]'} style={'w-full rounded-md'} dimension={{width:1912,height:908}}/>
              {/* <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/> */}
 
 

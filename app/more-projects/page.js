@@ -4,12 +4,15 @@ import Link from "next/link";
 
 // react icons dep // 
 import { FaHeart } from "react-icons/fa";
+import { FaFighterJet } from "react-icons/fa";
 
 
 function MoreProjects()
 {
   return (
     <div className="relative w-full h-screen flex flex-col gap-y-3 items-center justify-center">
+        <FaFighterJet className="absolute text-[400px] md:text-[600px] -rotate-90 z-[-10] text-slate-900"/>
+       
         <h1 className="max-md:text-center">More Project will be Coming soon , we are currently working on this section.</h1>
         <h1 className="flex gap-x-2 items-center"> <FaHeart className="text-[#4361ee]"/> <span>Till then keep learning and keep exploring</span>  <FaHeart className="text-[#4361ee]"/> </h1>
         <Link href={'/'}><button className="px-8 py-2 bg-blue-500 active:bg-blue-500/90 hover:bg-blue-500/90 rounded-full text-white font-light">Back</button></Link>
