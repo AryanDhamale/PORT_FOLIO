@@ -21,6 +21,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Tejas.dev",
   description: "Port folio page powerd by THUNDER",
+  icons : {
+    icon: '/icon/favicon-32x32.png'
+  }
 };
 
 export default function RootLayout({ children }) {

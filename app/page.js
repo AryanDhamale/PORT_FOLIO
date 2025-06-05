@@ -1,8 +1,8 @@
-import Navbar from "@/components/headAndFoot/Navbar";
+// import Navbar from "@/components/headAndFoot/Navbar";
+import Navbar from "@/components/headAndFoot/new-navbar";
 import Hero from "@/components/Hero/new-hero";
 import About from "@/components/About/About";
 import ProjectWork from "@/components/ProjectWorks/project-works";
-import Skills from "@/components/Skill&Tools/skillsOne";
 import SkillsNew from "@/components/Skill&Tools/skillsTwo";
 import Services from "@/components/Service/service";
 import Contact from "@/components/Contact/contact-us";
