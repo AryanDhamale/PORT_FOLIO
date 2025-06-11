@@ -4,6 +4,9 @@ import { FaAngleLeft , FaAngleRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import ImageLoader from "../common-con/image-loader";
 
+// react icon // 
+import { IoIosCloseCircle } from "react-icons/io";
+
 function ImageSlider({imgNo,control})
 {
     const imageArray=['dribbble.png','fileSharing.png','blackBird.png','peerTopeer.png','wonderlust.png','Spotify.png'];
@@ -19,9 +22,10 @@ function ImageSlider({imgNo,control})
         setcurrImage(index);
     }
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center gap-x-30 w-full min-h-screen z-[20] fixed top-0 left-0 bottom-0 bg-[#2b323e82]">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-x-30 w-full min-h-screen z-[40] fixed top-0 left-0 bottom-0 bg-[#2b323e82]">
 
-            <div className="absolute left-11 top-10"> <span onClick={()=>control((oldVal)=>({...oldVal,visible:false}))} className="text-blue-500 px-3 py-1 rounded-full bg-white text-sm font-medium cursor-pointer">Close</span> </div>
+            {/* <div className="absolute left-11 top-10"> <span onClick={()=>control((oldVal)=>({...oldVal,visible:false}))} className="text-blue-500 px-3 py-1 rounded-full bg-white text-sm font-medium cursor-pointer">Close</span> </div> */}
+            <div onClick={()=>control((oldVal)=>({...oldVal,visible:false}))} className="absolute left-9 top-10 size-8 rounded-full bg-white flex items-center justify-center"> <IoIosCloseCircle className="text-blue-500 text-3xl"/> </div>
 
             {/* left */}
             <div onClick={prevSlide} className="size-12 rounded-full hidden md:flex  justify-center items-center bg-white cursor-pointer"> <FaAngleLeft className="text-xl text-blue-500"/> </div>
@@ -30,8 +34,10 @@ function ImageSlider({imgNo,control})
             <motion.div initial={{x:-20,opacity:0}} animate={{x:0,opacity:1}} exit={{x:20,opacity:0}} transition={{type:'spring',duration:0.5}} className='w-9/10 md:w-7/10'>
 
              {/* image loader will here */}
-             <ImageLoader url={'/projects/'+imageArray[currentImage]} loadingStyle={'w-full h-[300px] md:h-[500px]'} style={'w-full rounded-md'} dimension={{width:1912,height:908}}/>
-             {/* <Image className="w-full rounded-md" width={1912} height={908} src={'/projects/'+imageArray[currentImage]} alt="This is an image"/> */}
+             <div className="w-full h-[300px] md:h-[500px] flex items-center justify-center">
+                <ImageLoader url={'/projects/'+imageArray[currentImage]} loadingStyle={'w-full h-full'} style={'w-full rounded-md'} dimension={{width:1912,height:908}}/>
+             </div>
+             {/* <ImageLoader url={'/projects/'+imageArray[currentImage]} loadingStyle={'w-full h-[300px] md:h-[500px]'} style={'w-full rounded-md'} dimension={{width:1912,height:908}}/> */}
 
 
             </motion.div>

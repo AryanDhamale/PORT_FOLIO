@@ -2,17 +2,13 @@
 // local 
 import Link from "next/link";
 
-// react icons dep // 
-import { FaHeart } from "react-icons/fa";
-
 
 function MoreProjects()
 {
   return (
     <div className="relative w-full h-screen flex flex-col gap-y-3 items-center justify-center">
-       
         <h1 className="max-md:text-center">More Projects will be Coming soon , we are currently working on this section.</h1>
-        <h1 className=""> Till then keep learning and keep exploring </h1>
+        <h1> Till then keep learning and keep exploring </h1>
         <Link href={'/'}><button className="px-8 py-2 bg-blue-500 active:bg-blue-500/90 hover:bg-blue-500/90 rounded-full text-white font-light">Back</button></Link>
         
         {/* for bottom logo */}

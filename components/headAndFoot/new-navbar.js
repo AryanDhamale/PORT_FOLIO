@@ -10,7 +10,6 @@ import {
     Drawer,
     DrawerClose,
     DrawerContent,
-    DrawerDescription,
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
@@ -38,23 +37,23 @@ function Navbar() {
 
 
     return (
-        <header className="w-full h-28 flex items-center justify-center sticky top-0 left-0 z-[10]">
-            <nav className="w-9/10 bg-gradient-to-br from-[#4361ee]/20 to-[#7209b7]/20 border-1 h-13 rounded-full backdrop-blur-lg bg-surface-alpha flex items-center justify-between px-2.5">
+        <header className="w-full h-28 flex items-center justify-center sticky top-0 left-0 z-[30]">
+            <nav className="w-9/10 bg-gradient-to-br from-[#4361ee]/20 to-[#7209b7]/20 border-1 h-13 rounded-full backdrop-blur-md bg-surface-alpha flex items-center justify-between px-2.5">
 
                 {/* logo */}
                 <div className="flex items-center gap-x-2">
                     <div className="size-9 text-sm bg-[#3f37c9] rounded-full flex items-center justify-center font-light">TD</div>
-                    <span className="tracking-wide font-medium">Tejas Dhamale</span>
+                    <div className="tracking-wide font-medium"> <span className="">Tejas </span><span className="text-blue-500">Dhamale</span> </div>
                 </div>
 
                 {/* min-[1020px]:links */}
-                <div className="h-full hidden min-[1020px]:block">
+                <div className="h-full hidden min-[1110px]:block">
                     <ul className="relative h-full flex items-center gap-x-3">
                         <motion.div animate={indicatorStyle} transition={{ stiffness: 500, damping: 30 ,duration: 0.3 }} className="w-[110px] absolute backdrop-blur-lg bg-surface-alpha -z-[10] h-[83%] rounded-full"></motion.div>
                         {/* bg-[#4361ee]/20  */}
 
                         {
-                            sections.map((el) => <li key={el} ref={(tab) => (tabsRef.current[el] = tab)} className="rounded-full cursor-pointer w-[110px] text-center font-light text-base py-2"> <ScrollLink to={el[0].toLowerCase() + el.slice(1)} smooth={true} duration={600} spy={true} onSetActive={() => setActivetab(el)}> <span >{el}</span> </ScrollLink> </li> )
+                            sections.map((el) => <li key={el} ref={(tab) => (tabsRef.current[el] = tab)} className="rounded-full cursor-pointer w-[110px] text-center font-light text-base py-2"> <ScrollLink to={el[0].toLowerCase() + el.slice(1)} smooth={true} duration={600} spy={true} offset={-130} onSetActive={() => setActivetab(el)}> <span >{el}</span> </ScrollLink> </li> )
                         }
                         <li> | </li>
 
@@ -63,7 +62,7 @@ function Navbar() {
                 </div>
 
                 {/* side nav for mobile devices */}
-                <div className="flex gap-x-4 lg:hidden">
+                <div className="flex gap-x-4  min-[1110px]:hidden">
                     <Drawer>
                         <DrawerTrigger asChild>
                             {/* <Button variant="outline" size="icon"> <Menu />  </Button> */}

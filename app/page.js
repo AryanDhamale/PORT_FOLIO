@@ -1,7 +1,7 @@
-// import Navbar from "@/components/headAndFoot/Navbar";
 import Navbar from "@/components/headAndFoot/new-navbar";
 import Hero from "@/components/Hero/new-hero";
 import About from "@/components/About/About";
+import Resume from "@/components/Resume/resume";
 import ProjectWork from "@/components/ProjectWorks/project-works";
 import SkillsNew from "@/components/Skill&Tools/skillsTwo";
 import Services from "@/components/Service/service";
@@ -19,9 +19,9 @@ function Home() {
         <main className="flex flex-col gap-y-40">
           <Hero />
           <About />
+          <Resume />
           <ProjectWork />
-          {/* <Skills /> */}
-          <SkillsNew/>
+          <SkillsNew />
           <Services />
           <Contact />
         </main>

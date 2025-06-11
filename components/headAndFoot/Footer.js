@@ -4,7 +4,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 function Footer()
 {
-    const url='https://youtu.be/yEvVyuNd9ZE?si=8PsraSIOEPAqn2iT';
+    const url='https://youtu.be/AX1zRInC_TA?si=ax0hTm_UAoIHW-0i';
     return (
         <footer className="mt-10 border-t-1 border-slate-800 w-full h-25 flex items-center justify-center min-[734px]:justify-between px-13">
 
