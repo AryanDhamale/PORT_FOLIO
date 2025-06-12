@@ -14,7 +14,7 @@ function Footer()
             </div>
 
             {/* must update with real-time-update PUSH  */}
-            <div className="hidden min-[734px]:block text-sm font-light opacity-50 tracking-wide"> Last updated on June 06, 2025 at 9:17 PM IST </div>
+            <div className="hidden min-[734px]:block text-sm font-light opacity-50 tracking-wide"> Last updated on June 12, 2025 at 11:15 AM IST </div>
 
         </footer>
     );

@@ -2,7 +2,6 @@
 
 import ConHeading from "../common-con/con-heading";
 import { motion , AnimatePresence } from "framer-motion";
-// import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import ImageSlider from "./image-slider";

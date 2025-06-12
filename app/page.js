@@ -5,6 +5,7 @@ import Resume from "@/components/Resume/resume";
 import ProjectWork from "@/components/ProjectWorks/project-works";
 import SkillsNew from "@/components/Skill&Tools/skillsTwo";
 import Services from "@/components/Service/service";
+import Memories from "@/components/Memories/some-memories";
 import Contact from "@/components/Contact/contact-us";
 import Footer from "@/components/headAndFoot/Footer";
 import Loader from "@/components/Loader/loader";
@@ -23,6 +24,7 @@ function Home() {
           <ProjectWork />
           <SkillsNew />
           <Services />
+          <Memories/>
           <Contact />
         </main>
         <Footer />

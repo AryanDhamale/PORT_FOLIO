@@ -7,16 +7,16 @@ function SkillsNew() {
         {
             heading: 'Development Skills',
             skills: [
-                { title: 'Front End', list: 'React.js , Next.js' },
+                { title: 'Front End', list: 'React.js , Next.js,Redux Toolkit ' },
                 { title: 'Back End', list: 'Node.js, Express.js , MongoDB , FireBase' },
-                { title: 'APIs & Integration', list: 'NextAuth , Razorpay , REST' }
+                { title: 'APIs & Integration', list: 'NextAuth , Razorpay , REST , Socket.io, WebRTC' }
                 
             ]
         },
         {
             heading: 'UI/UX && Dev-Tools',
             skills: [
-                { title: 'User-Centric Design', list: ' Shadcn.ui , Material.ui' },
+                { title: 'User-Centric Design', list: ' Shadcn.ui , Material.ui , TailwindCSS , Bootstrap' },
                 { title: 'Interaction & Animation', list: 'Lottie , Framer Motion' },
                 { title: 'CI/CD & Deployment', list: 'Netlify , Vercel , GitHub Actions' }
             ]
@@ -24,9 +24,9 @@ function SkillsNew() {
         {
             heading: ' Web && Soft Skills',
             skills: [
-                { title : 'Web Technology' ,list: 'HTML,CSS,JS,Accessiblity'},
+                { title : 'Web Technology' ,list: 'HTML,CSS,JS,TS,Accessiblity'},
                 { title : 'Soft skills' ,list: 'Project Architecture & Planning,Problem Solving & Debugging ,Team Collaboration' },
-                { title: 'Other Skills', list: 'SEO & Accessibility,Responsive Design' }
+                { title: 'Other Skills', list: 'SEO & Accessibility,Responsive Design,DSA' }
             ]
         }
     ];
@@ -61,8 +61,7 @@ function SkillsNew() {
                                         {
                                             each.list.split(',').map((nafskill,idx)=><button key={idx} className="px-3 py-2 bg-[#4361ee] text-white rounded-full">{nafskill}</button>)
                                         }
-                                        
-                                        
+                                              
                                     </div>
                                 </div>)
                                 }

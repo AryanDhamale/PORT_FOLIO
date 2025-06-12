@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import ImageLoader from "../common-con/image-loader";
 
 function About() {
-
-    const url='https://drive.google.com/file/d/1BA2uB3htChmBFvwgYfEWgFK9rU7BBAe6/view?usp=sharing';
     
     return (
         <motion.section id="about" initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
@@ -16,7 +14,7 @@ function About() {
                     <div className="flex justify-center items-center ">
                         <div className="relative border-1 bg-zinc-700/50 border-[#f2f2f226] rounded-3xl p-2 w-full min-[430px]:w-4/5 md:w-1/2 h-[500px] xl:h-4/5">
                             {/* for line */}
-                            <div className="absolute -top-[0.9px] rounded-full left-1/2 -transform -translate-x-1/2 bg-white/90 h-[0.6px] w-1/2 "></div>
+                            <div className="absolute -top-[0.9px] rounded-full left-1/2 -transform -translate-x-1/2 bg-white/90 drop-shadow-2xl h-[0.6px] w-1/2 "></div>
                             <ImageLoader loadingStyle={'w-full h-full'} url='/user/tejas.jpg' style={'w-full h-full rounded-2xl border-1 border-[#f2f2f226] select-none object-cover'} dimension={{width:1813,height:3223}}/>
                         </div>
                     </div>
@@ -32,9 +30,9 @@ function About() {
                                 <p>I&apos;ve developed and deployed projects ranging from travel booking platforms and Spotify clones to peer-to-peer file sharing and video calling apps. My focus is not just on building functional products but on creating thoughtful UI/UX, integrating CI/CD pipelines, and ensuring performance and accessibility.</p>
 
                                 <p>I hold a <b className="text-blue-400 opacity-100">Bachelor of Technology (B.Tech)</b> degree from <b className="text-blue-400 opacity-100">Sant Gadge Baba Amravati University specialized in Computer Science and Engineering</b>, and I&apos;m always looking forward to learning, collaborating, and solving real-world problems through code.</p>
-                            </div>
 
-                            <div>If you want to any query for me you can directly mail to will, we hope probabiliy it will be solved</div>
+                                <p>I strongly believe that merely pushing code to GitHub or solving countless LeetCode problems holds little value without purpose or understanding. Instead, I focus on solving meaningful problems and building real-world projects that contribute to practical learning and technical growth.</p>
+                            </div>
                             
                         </div>
                     </div>
