@@ -15,6 +15,8 @@ function Contact() {
         <motion.section id="contact" initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
             <div className="w-full flex flex-col items-center justify-center gap-y-10 md:px-4">
                 <ConHeading text='CONTACT ME' />
+                {/* from-[#d4eaf7] to-[#f9f9f9] */}
+                {/* from-[#605dff] via-[#343773] to-[#34377379] */}
                 <div className="max-md:px-2 max-sm:py-20 relative bg-gradient-to-br from-[#605dff] via-[#343773] to-[#34377379] mt-6 w-full min-h-[70vh] flex flex-col justify-center items-center gap-y-3 text-white">
 
                     {/* shapes */}

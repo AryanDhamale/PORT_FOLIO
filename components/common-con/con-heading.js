@@ -1,15 +1,10 @@
 
-function ConHeading({text}) {
+function ConHeading({ text }) {
+    // #0090f7
     return (
-            <div>
-                <h4 className="select-none text-[#4361ee] text-xl text-center font-semibold mb-1 md:mb-3">{text}</h4>
-                {/* underline */}
-                <div className="w-[200px] mx-auto grid grid-cols-3">
-                    <div className="border-1 border-slate-300" />
-                    <div className="border-1 border-[#4361ee]" />
-                    <div className="border-1 border-slate-300" />
-                </div>
-            </div>
+        <div>
+            <h4 className="select-none text-2xl opacity-90 bg-gradient-to-r from-[#022640] to-[#5786ab] bg-clip-text text-transparent text-center font-bold tracking-wider mb-1 md:mb-3">{text}</h4>
+        </div>
     );
 }
 

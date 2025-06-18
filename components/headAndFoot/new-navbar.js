@@ -43,7 +43,7 @@ function Navbar() {
                 {/* logo */}
                 <div className="flex items-center gap-x-2">
                     <div className="size-9 text-sm bg-[#3f37c9] rounded-full flex items-center justify-center font-light">TD</div>
-                    <div className="tracking-wide font-medium"> <span className="">Tejas </span><span className="text-blue-500">Dhamale</span> </div>
+                    <div className="tracking-wide font-medium"> <span className="">Tejas </span><span className="text-[#0090f7]">Dhamale</span> </div>
                 </div>
 
                 {/* min-[1020px]:links */}

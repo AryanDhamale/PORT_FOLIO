@@ -15,7 +15,7 @@ function About() {
                         <div className="relative border-1 bg-zinc-700/50 border-[#f2f2f226] rounded-3xl p-2 w-full min-[430px]:w-4/5 md:w-1/2 h-[500px] xl:h-4/5">
                             {/* for line */}
                             <div className="absolute -top-[0.9px] rounded-full left-1/2 -transform -translate-x-1/2 bg-white/90 drop-shadow-2xl h-[0.6px] w-1/2 "></div>
-                            <ImageLoader loadingStyle={'w-full h-full'} url='/user/tejas.jpg' style={'w-full h-full rounded-2xl border-1 border-[#f2f2f226] select-none object-cover'} dimension={{width:1813,height:3223}}/>
+                            <ImageLoader loadingStyle={'w-full h-full'} url='portfolio_memories/Tejas' signed={true} style={'w-full h-full rounded-2xl border-1 border-[#f2f2f226] select-none object-cover'} dimension={{width:1813,height:3223}}/>
                         </div>
                     </div>
 

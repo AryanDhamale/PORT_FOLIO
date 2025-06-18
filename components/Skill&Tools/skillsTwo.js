@@ -35,6 +35,7 @@ function SkillsNew() {
             <div className="w-full flex flex-col gap-y-10">
 
                 <ConHeading text='SKILLS' />
+                
                 {/* container  */}
                 <div className=" mt-5 w-full min-h-[80vh] grid grid-cols-1 md:grid-cols-2 gap-y-10 lg:grid-cols-3">
                     {/* cards */}

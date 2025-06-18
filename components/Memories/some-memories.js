@@ -1,6 +1,6 @@
 "use client";
 import ConHeading from "../common-con/non-tracking-con-heading";
-import Image from "next/image";
+import ImageLoader from "../common-con/image-loader";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -10,7 +10,7 @@ function Memories() {
     const duplicate_images_array=[...images_array,...images_array,...images_array];
     const parentWidth=useRef(null);
 
-    const how_much = "-"+String(400*images_array.length)+"%";
+    const how_much = "-"+String(400*images_array.length)+"%"; // to try how much % left a card div // 
 
     const marqueeVariantsLeft = {
     animate: {
@@ -48,7 +48,8 @@ function Memories() {
                 {/* left-to-right */}
                 <motion.div ref={parentWidth} variants={marqueeVariantsLeft} animate="animate" className="h-65 w-full py-3 flex gap-x-5">
                 {
-                  duplicate_images_array.reverse().map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full"><Image width={1920} height={1080} className="border-2 border-[#3f37c9] rounded-xl object-cover w-full h-full" src={'/Memories/'+el} alt="this is an image" /></div>)
+                  duplicate_images_array.reverse().map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full"> <ImageLoader url={'/Memories/'+el} loadingStyle={'w-full h-full'} style={'border-2 border-[#3f37c9] rounded-xl object-cover w-full h-full'} dimension={{width:1920,height:1080}} alt={`Failed to load -> ${el}`}/> </div>)
+                  
                 }
                 </motion.div>
                 
@@ -56,7 +57,9 @@ function Memories() {
                 {/* right-to-left */}
                 <motion.div variants={marqueeVariantsRight} animate="animate" className="h-65 w-full py-3 flex gap-x-5">
                 {
-                  duplicate_images_array.map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full"><Image width={1000} height={1000} className="border-2 border-[#3f37c9] rounded-xl object-cover w-full h-full" src={'/Memories/'+el} alt="this is an image" /></div>)
+                  duplicate_images_array.map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full">
+                    <ImageLoader url={'/Memories/'+el} loadingStyle={'w-full h-full'} style={'border-2 border-[#3f37c9] rounded-xl object-cover w-full h-full'} dimension={{width:1920,height:1080}} alt={`Failed to load -> ${el}`}/>
+                  </div>)
                 }
                 </motion.div>
 
