@@ -10,30 +10,31 @@ function Resume() {
 
                 <ConHeading firstHalf={'Res'} secondHalf={'ume'} />
 
-                <div className="min-h-[80vh] grid grid-cols-1 md:grid-cols-2 max-md:gap-y-10 px-10 py-15">
+                <div className="relative min-h-[80vh] grid grid-cols-1 md:grid-cols-2 max-md:gap-y-10 px-10 py-15">
+                <div className="absolute top-0 left-0 w-full min-h-[80vh] bg-gradient-to-br from-[#0090f7] via-[#131313] to-[#0090f7] blur-[400px]"></div>
                     {/* left*/}
                     <div className="">
 
                         <div className="relative w-[97%] sm:w-4/5 mx-auto flex flex-col gap-y-16">
 
                             {/* line */}
-                            <div className="w-[1px] rounde-full h-full bg-blue-500 absolute -left-6.5 top-0" />
+                            <div className="w-[1px] rounde-full h-full bg-blue-400 absolute -left-6.5 top-0" />
 
                             <div className="relative">
                                 {/* dot */}
-                                <div className="size-5 top-1 -left-9 rounded-full bg-black border-2 border-blue-500 absolute flex items-center justify-center"> <div className="bg-blue-400 rounded-full size-4/5"></div> </div>
+                                <div className="size-5 top-1 -left-9 rounded-full bg-black border-2 border-blue-500 absolute flex items-center justify-center"> <div className="bg-blue-500 rounded-full size-4/5"></div> </div>
                                 <h1 className="text-2xl font-light opacity-90 mb-2 text-blue-400">Introduction</h1>
                                 <p className="font-light text-sm tracking-wider ">I`&apos;m a passionate Full-stack (MERN) with expertise in building scalable apps, optimized UIs with React, secure REST APIs using Node.js, and robust database integration with MongoDB. I focus on performance, real-time features, and end-to-end delivery.</p>
                             </div>
 
                             <div className="relative">
                                 {/* dot */}
-                                <div className="size-5 top-1 -left-9 rounded-full bg-black border-2 border-blue-500 absolute flex items-center justify-center"> <div className="bg-blue-400 rounded-full size-4/5"></div> </div>
+                                <div className="size-5 top-1 -left-9 rounded-full bg-black border-2 border-blue-500 absolute flex items-center justify-center"> <div className="bg-blue-500 rounded-full size-4/5"></div> </div>
                                 <h1 className="text-2xl font-light opacity-90 mb-2 text-blue-400">Education</h1>
                                 <ul className="ps-2 flex flex-col gap-y-2">
                                     <li className="font-light text-sm tracking-wider flex items-center gap-x-2"> <div className="font-medium w-[90px] opacity-90">Degree</div> : <div className="italic">Bachelor of Technology in Computer Science</div> </li>
-                                    <li className="font-light text-sm tracking-wider flex items-center gap-x-2"> <div className="font-medium w-[90px] opacity-90">University</div> : <div className="italic flex items-center gap-x-2"> <Image width={240} height={240} className="size-4" src={'/univercity/univercity.png'} alt="this is an image"/> <span>Sant Gadge Baba Amravati University</span> </div> </li>
-                                    <li className="font-light text-sm tracking-wider flex items-center gap-x-2"> <div className="font-medium w-[90px] opacity-90">Graduation</div> : <div className="italic">2021 - 2024</div> </li>
+                                    <li className="font-light text-sm tracking-wider flex items-center gap-x-2"> <div className="font-medium w-[90px] opacity-90">University</div> : <div className="italic"><span>Sant Gadge Baba Amravati University</span> </div> </li>
+                                    <li className="font-light text-sm tracking-wider flex items-center gap-x-2"> <div className="font-medium w-[90px] opacity-90">Graduation</div> : <div className="italic">2021 - 2025</div> </li>
                                 </ul>
                             </div>
 
@@ -60,7 +61,7 @@ function Resume() {
                         <div className="relative w-[97%] sm:w-4/5 mx-auto flex flex-col gap-y-16">
 
                             {/* line */}
-                            <div className="w-[1px] rounde-full h-full bg-blue-500 absolute -left-6.5"></div>
+                            <div className="w-[1px] rounde-full h-full bg-blue-400 absolute -left-6.5"></div>
 
                             {/* for certification */}
                             <div className="relative">

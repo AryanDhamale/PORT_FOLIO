@@ -3,7 +3,7 @@ import Hero from "@/components/Hero/new-hero";
 import About from "@/components/About/About";
 import Resume from "@/components/Resume/resume";
 import ProjectWork from "@/components/ProjectWorks/project-works";
-import SkillsNew from "@/components/Skill&Tools/skillsTwo";
+import SkillsNew from "@/components/Skill&Tools/my-skills";
 import Services from "@/components/Service/service";
 import Memories from "@/components/Memories/some-memories";
 import Contact from "@/components/Contact/contact-us";

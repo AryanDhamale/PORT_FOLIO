@@ -41,14 +41,15 @@ function Memories() {
   };
     return (
         <motion.section initial={{y:40,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.8}}>
-        <div className="w-full">
+        <div className="w-full relative">
+            <div className="absolute top-0 left-0 w-full min-h-[80vh] bg-gradient-to-br from-[#0090f7] via-[#131313] to-[#0090f7] blur-[400px]"></div>
             <ConHeading firstHalf={'Some'} secondHalf={' Memories'} />
             <div className="py-10 w-full min-h-[70vh] flex flex-col gap-y-3 overflow-hidden whitespace-nowrap">
 
                 {/* left-to-right */}
                 <motion.div ref={parentWidth} variants={marqueeVariantsLeft} animate="animate" className="h-65 w-full py-3 flex gap-x-5">
                 {
-                  duplicate_images_array.reverse().map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full"> <ImageLoader url={'/Memories/'+el} loadingStyle={'w-full h-full'} style={'border-2 border-[#3f37c9] rounded-xl object-cover w-full h-full'} dimension={{width:1920,height:1080}} alt={`Failed to load -> ${el}`}/> </div>)
+                  duplicate_images_array.reverse().map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full"> <ImageLoader url={'/Memories/'+el} loadingStyle={'w-full h-full'} style={'rounded-xl object-cover w-full h-full'} dimension={{width:1920,height:1080}} alt={`Failed to load -> ${el}`}/> </div>)
                   
                 }
                 </motion.div>
@@ -58,7 +59,7 @@ function Memories() {
                 <motion.div variants={marqueeVariantsRight} animate="animate" className="h-65 w-full py-3 flex gap-x-5">
                 {
                   duplicate_images_array.map((el, idx) => <div key={idx} className="select-none flex-shrink-0 w-[400px] h-full">
-                    <ImageLoader url={'/Memories/'+el} loadingStyle={'w-full h-full'} style={'border-2 border-[#3f37c9] rounded-xl object-cover w-full h-full'} dimension={{width:1920,height:1080}} alt={`Failed to load -> ${el}`}/>
+                    <ImageLoader url={'/Memories/'+el} loadingStyle={'w-full h-full'} style={'rounded-xl object-cover w-full h-full'} dimension={{width:1920,height:1080}} alt={`Failed to load -> ${el}`}/>
                   </div>)
                 }
                 </motion.div>
